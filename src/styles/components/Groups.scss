@@ -1,0 +1,21 @@
+#groups-container {
+  display: flex;
+  flex-direction: column;
+  
+  header.ui-header {
+    button {
+      background-color: $green-color;
+      color: $black-color;
+      font-weight: bold;
+      height: 35px;
+      min-width: 100px;
+      margin: 0 10px;
+    }
+  }
+
+  .groups {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}

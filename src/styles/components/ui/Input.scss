@@ -1,0 +1,32 @@
+.ui-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 286px;
+  margin: 5px 0;
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    margin: 5px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid $light-grey-color;
+    border-radius: 5px;
+  }
+
+  i.password-icon {
+    position: absolute;
+    right: 12px;
+    top: 18px;
+    font-size: 13px;
+    cursor: pointer;
+    color: $light-grey-color;
+
+    &:hover {
+      color: $black-color;
+    }
+  }
+}

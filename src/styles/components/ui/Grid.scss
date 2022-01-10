@@ -1,0 +1,149 @@
+$grid-grey-color: #f0f2f5;
+
+.ui-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 200px;
+
+  &[data-loading=true] {
+    pointer-events: none;
+
+    .loader {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(240, 242, 245, .2);
+      height: 100%;
+      width: 100%;
+  
+      i {
+        font-size: 28px;
+      }
+      
+      span {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  [data-filterable] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+          
+    .ui-input {
+      margin: 0;
+      min-width: 0;
+      
+      input {
+        width: 256px; 
+        margin: 0;
+        padding: 8px;
+        caret-color: initial;
+      }
+    }
+  }
+
+  table {
+    border-spacing: 0;
+    caret-color: transparent;
+
+    thead {
+
+      th {
+        padding: 8px;
+        height: 35px;
+        border-bottom: 1px solid $grid-grey-color;
+        border-right: 1px solid $grid-grey-color;
+        
+        &:last-child {
+          border-right: none;
+        }
+
+        & > [data-sortable=true] {
+          cursor: pointer;
+        }
+
+        .sort-arrow {
+          position: relative;
+          
+          i {
+            position: absolute;
+            left: 5px;
+          }
+
+          &.asc {   
+            top: 5px;
+          }
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+
+        &:nth-child(even) {
+          background-color: $grid-grey-color;
+        }
+
+        td {
+          padding: 8px;
+          height: 35px;
+          border-right: 1px solid $grid-grey-color;
+          overflow: hidden;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-grid-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .ui-grid-pagination {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      caret-color: transparent;
+  
+      button {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px 8px;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: $grid-grey-color;
+        }
+
+        &:disabled {
+          opacity: .8;
+          pointer-events: none;
+        }
+  
+        i {
+          font-size: 13px;
+        }
+      }
+  
+      .page {
+        user-select: none;
+        -webkit-user-select: none;
+        cursor: default;
+        font-weight: bold;
+        margin: 0 5px;
+      }
+    }
+  }
+}

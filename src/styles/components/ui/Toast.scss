@@ -1,0 +1,141 @@
+#toasts-container {
+  position: fixed;
+
+  &.top {
+    top: 25px;
+  }
+
+  &.bottom {
+    bottom: 25px;
+  }
+
+  &.right {
+    right: 25px;
+  }
+
+  &.left {
+    left: 25px;
+  }
+
+  &.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .toast {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: stretch;
+    min-height: 50px;
+    max-width: 400px;
+    width: 400px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    animation: toast-out 200ms cubic-bezier(.33859, -.42, 1, -.22);
+    animation-fill-mode: forwards;
+
+    &:last-child {
+      margin: 0;
+    }
+  
+    &.toast-in {
+      animation: toast-in 200ms cubic-bezier(.175, .885, .32, 1.27499);
+    }
+  
+    &.toast-success {
+      background-color: #7fffd4;
+    }
+  
+    &.toast-error {
+      background-color: #ff6961;
+    }
+  
+    &.toast-info {
+      background-color: #3ea2ff;
+    }
+  
+    &.toast-warning {
+      background-color: #ffb347;
+    }
+  
+    .toast-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      min-width: 35px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  
+    .toast-content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      padding: 10px;
+      word-break: break-word;
+      
+      section {
+        padding: 10px 0;
+      }
+  
+      .toast-remove {
+        width: 10px;
+        cursor: pointer;
+        opacity: .7;
+        margin-left: 10px;
+  
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+  
+    .toast-countdown {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(26, 27, 33, 0.2);
+      height: 4px;
+      animation: toast-countdown linear 1;
+    }
+  
+    @keyframes toast-in {
+      0% {
+        opacity: 0;
+        transform: translate(0, -30px) rotateX(90deg);
+      }
+  
+      100% {
+        opacity: 1;
+        transform: translate(0, 0) rotateX(0deg);
+      }
+    }
+  
+    @keyframes toast-out {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+  
+      100% {
+        opacity: 0;
+        transform: scale(.8);
+      }
+    }
+  
+    @keyframes toast-countdown {
+      0% {
+        width: 100%;
+      }
+    
+      100% {
+        width: 0%;
+      }
+    }
+  }  
+}

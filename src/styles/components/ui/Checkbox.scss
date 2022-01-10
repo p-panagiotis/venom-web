@@ -1,0 +1,14 @@
+.ui-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    margin: 0 10px;
+    accent-color: $blue-color;
+  }
+}

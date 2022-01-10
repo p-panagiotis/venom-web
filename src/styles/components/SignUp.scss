@@ -1,0 +1,29 @@
+#signup-container {
+  display: flex;
+  justify-content: center;  
+  margin: 65px 100px;
+
+  .signup-wrapper {
+    display: flex;
+    background-color: $white-color;
+    box-shadow: 0px 1px 15px -10px $black-color;
+    border-radius: 10px;
+    padding: 20px;
+
+    .signup-content {
+      display: flex;
+      flex-direction: column;
+
+      form {
+        button {
+          font-size: 16px;
+        }
+      }
+
+      .auth-link {
+        margin: 10px;
+      }
+    }
+  }
+}
+

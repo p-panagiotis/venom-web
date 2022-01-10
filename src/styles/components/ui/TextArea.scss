@@ -1,0 +1,18 @@
+.ui-textarea {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  
+  label {
+    font-weight: bold;
+  }
+
+  textarea {
+    margin: 5px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid $light-grey-color;
+    border-radius: 5px;
+    resize: none;
+  }
+}

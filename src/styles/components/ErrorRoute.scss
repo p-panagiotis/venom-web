@@ -1,0 +1,42 @@
+body.error-route {
+  background-color: #fafbfc;
+
+  #navbar, 
+  #nav-sidebar {
+    display: none;
+  }
+}
+
+#error-route-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 25px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    & > * {
+      font-family: 'Righteous', cursive;
+    }
+
+    .title {
+      font-size: 80px;
+    }
+
+    .subtitle {
+      font-size: 30px;
+    }
+
+    .desc {
+      font-size: 20px;
+    }
+
+    .link {
+      margin: 30px 0;
+      font-size: 16px;
+      color: $black-color;
+    }
+  }
+}

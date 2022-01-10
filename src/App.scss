@@ -1,0 +1,54 @@
+@import './styles/_fonts';
+@import './styles/_icons';
+@import './styles/_palette';
+@import './styles/_custom';
+
+* :not(h1, h2, h3, h4, h5, h6, p, b, em, div) {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: Roboto, Arial, sans-serif;
+  letter-spacing: .3px;
+  box-sizing: border-box;
+  color: $black-color;
+
+  &:after, &:before {
+   box-sizing: border-box; 
+  }
+}
+
+#root {
+  display: flex;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+}
+
+main {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #2e6cb5;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #f0f5fb;
+  margin: 5px 0;
+}
+
+body.public-route {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+
+  #root {
+    flex-flow: inherit;
+  }  
+}
